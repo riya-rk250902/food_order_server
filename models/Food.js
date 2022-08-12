@@ -22,7 +22,6 @@ const foodSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    
     //"type": "grunt",
     //  "last_used": {"$date":{"$numberLong":"1602720972129"}},
     //"created_at":{"$date":{"$numberLong":"1602720972129"}},

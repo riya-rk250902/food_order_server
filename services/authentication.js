@@ -14,18 +14,16 @@ const authenticationChecker = (req,res,next) => {
     if(req.headers.auth){
         try {
             const token = req.headers.auth;
-
-            var decoded = jwt.verify(token, 'secret');
-
+            var decoded = jwt.verify(token, "secret");
             next();
         } catch (error) {
 
-            return res.status(500).send("User not authenticated");
+            return res.send("User not authenticated");
         }
     }
     else
     {
-        return res.status(502).send("No headers Detected");
+        return res.status(500).send("No headers Detected");
     }
 };
 
